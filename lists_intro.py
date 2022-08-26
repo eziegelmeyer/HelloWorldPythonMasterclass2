@@ -6,7 +6,7 @@ computer_parts = ["computer",
                   ]
 print(computer_parts)
 
-# computer_parts[3] = "track ball"
+# computer_parts[3] = "trackball"
 print(computer_parts[3:])
 
 computer_parts[3:] = ["trackball"]
