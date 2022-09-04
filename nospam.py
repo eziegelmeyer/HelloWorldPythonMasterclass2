@@ -34,5 +34,12 @@ for meal in menu:
             meal.remove("spam")
 print(menu)
 
+print("Solution 2:")
+
 # 2 - print out the items in each list, as long as
 # it's not spam
+
+for meal in menu:
+    for item in meal:
+        if item != "spam":
+            print(item)
