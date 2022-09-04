@@ -28,18 +28,33 @@ menu = [
 # print(catty_list)
 
 # 1 - remove spam from each list, then print the list
-for meal in menu:
-    for item in meal:
-        if "spam" == item:
-            meal.remove("spam")
-print(menu)
+# for meal in menu:
+#     for item in meal:
+#         if "spam" == item:
+#             meal.remove("spam")
+# print(menu)
+
+# this solution is WRONG because I didn't iterate correctly the last item in the list
+# see solution 3 why negative slicing is important
 
 print("Solution 2:")
 
 # 2 - print out the items in each list, as long as
 # it's not spam
 
+# for meal in menu:
+#     for item in meal:
+#         if item != "spam":
+#             print(item, end=", ")
+#     print() # this separates the iterations per loop
+
+# this answer is correct
+
+# print("Solution 3:")
+#
 for meal in menu:
-    for item in meal:
-        if item != "spam":
-            print(item)
+    for index in range(len(meal) - 1, -1, -1):
+        if meal[index] == "spam":
+            del meal[index]
+
+    print(", ".join(meal))
